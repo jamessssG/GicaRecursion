@@ -14,7 +14,7 @@ public class GicaRecursion {
             if (files != null) {
                 for (File file : files) {
                     if (file.isDirectory()) {
-                        searchFiles(file, extension, listener); // Recursive call
+                        searchFiles(file, extension, listener);
                     } else if (file.getName().endsWith(extension)) {
                         listener.onFileFound(file.getAbsolutePath());
                     }
@@ -25,8 +25,7 @@ public class GicaRecursion {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        // Get user input for directory and file extension
+        
         System.out.print("Enter directory path: ");
         String directoryPath = scanner.nextLine();
 
